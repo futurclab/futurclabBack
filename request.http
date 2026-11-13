@@ -31,7 +31,7 @@ POST http://localhost:8080/api/v1/auth/refresh
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5NDMzOTU5MSwiZXhwIjoxNzk0OTQ0MzkxfQ.5vwA5KdIRSnlOCRQZqXUvpwr2P0VNIEHJdCp5Hjpcw8"
+    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQ1OTM3NTgsImV4cCI6MTc5NDU5MzkzOH0.nzYlS7Jfx9RZ6EZe2rJdbK3GuOm3NtMWicBWef9Z36k"
 }
 
 ### PUBLIC
@@ -39,7 +39,7 @@ GET http://localhost:8080/api/v1/main/public
 
 ### PRIVATE
 GET http://localhost:8080/api/v1/main/private
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQzMzk1NzAsImV4cCI6MTc5NDMzOTc1MH0.zaA1Yh0REus4uewj7HvDq0RdXbSlhVpzV_j8V2dJKRU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQ1OTM3NTgsImV4cCI6MTc5NDU5MzkzOH0.nzYlS7Jfx9RZ6EZe2rJdbK3GuOm3NtMWicBWef9Z36k
 
 ### PROTECTED
 GET http://localhost:8080/api/v1/main/admin
@@ -47,4 +47,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQGxvY2FsaG9zdC5lc
 
 ### ME 
 GET http://localhost:8080/api/v1/auth/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQzMzg4NzYsImV4cCI6MTc5NDMzOTA1Nn0.3LUlUBY6CpK7Z_RbOEIADKHQtCiDvLDWDaVSG3fn_JU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQ1OTM3NTgsImV4cCI6MTc5NDU5MzkzOH0.nzYlS7Jfx9RZ6EZe2rJdbK3GuOm3NtMWicBWef9Z36k
