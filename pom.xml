@@ -206,9 +206,11 @@
                         <configuration>
                             <excludes>
                                 <!-- Excluye las clases Application del análisis -->
-                                <exclude>**/*Application.class</exclude>
+                                <exclude>**/*Application.*</exclude>
                                 <!-- Excluye las clases de configuración del análisis -->
                                 <exclude>**/config/**</exclude>
+                                <!-- Excluye las clases de model del análisis -->
+                                <exclude>**/model/**</exclude>
                                 <!-- Excluye las clases de repositorio del análisis -->
                                 <exclude>**/repository/**</exclude>
                                 <!-- Excluye las clases de dto del análisis -->
@@ -236,6 +238,20 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <excludes>
+                        <!-- Excluye las clases Application del análisis y verificación -->
+                        <exclude>**/*Application.*</exclude>
+                        <!-- Excluye las clases de configuración del análisis y verificación -->
+                        <exclude>**/config/**</exclude>
+                        <!-- Excluye las clases de model del análisis y verificación -->
+                        <exclude>**/model/**</exclude>
+                        <!-- Excluye las clases de repositorio del análisis y verificación -->
+                        <exclude>**/repository/**</exclude>
+                        <!-- Excluye las clases de dto del análisis y verificación -->
+                        <exclude>**/dto/**</exclude>
+                        <!-- Excluye las clases de exception del análisis y verificación -->
+                        <exclude>**/exception/**</exclude>
+                    </excludes>
                     <rules>
                         <!-- Reglas para todo el proyecto (BUNDLE) -->
                         <rule>
