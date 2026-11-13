@@ -1,0 +1,50 @@
+### REGISTER
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "joaquin",
+    "password": "Abcd1234",
+    "email": "joaquin@localhost.com"
+}
+
+### LOGIN USER
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "joaquin",
+    "password": "Abcd1234"
+}
+
+### LOGIN ADMIN
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "Abcd1234"
+}
+
+### REFRESH
+POST http://localhost:8080/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5NDMzOTU5MSwiZXhwIjoxNzk0OTQ0MzkxfQ.5vwA5KdIRSnlOCRQZqXUvpwr2P0VNIEHJdCp5Hjpcw8"
+}
+
+### PUBLIC
+GET http://localhost:8080/api/v1/main/public
+
+### PRIVATE
+GET http://localhost:8080/api/v1/main/private
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQzMzk1NzAsImV4cCI6MTc5NDMzOTc1MH0.zaA1Yh0REus4uewj7HvDq0RdXbSlhVpzV_j8V2dJKRU
+
+### PROTECTED
+GET http://localhost:8080/api/v1/main/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQGxvY2FsaG9zdC5lcyIsInN1YiI6ImFkbWluIiwiaWF0IjoxNzk0MzM5NjE0LCJleHAiOjE3OTQzMzk3OTR9.dsp4sFIVZdajAPcRxVrMvsY47tJV_hayoKVCmrxr5fQ
+
+### ME 
+GET http://localhost:8080/api/v1/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvYXF1aW5AbG9jYWxob3N0LmNvbSIsInN1YiI6ImpvYXF1aW4iLCJpYXQiOjE3OTQzMzg4NzYsImV4cCI6MTc5NDMzOTA1Nn0.3LUlUBY6CpK7Z_RbOEIADKHQtCiDvLDWDaVSG3fn_JU

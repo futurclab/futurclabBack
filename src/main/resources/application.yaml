@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: futurjob
+
+  datasource:
+    # Cadena de conexion a la bbdd.
+    # Al poner el valor entre ${key:value} priorizamos la variable de entorno de nombre key. Si no la encuentra, toma el valor value.
+    url: jdbc:mysql://localhost:3306/solidaria
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      # Data Definition Language, indica como Hibernate debe manejar el esquema de la base de datos al iniciar la app.
+      # Recomendado: Validate.
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        # Indica el dialecto de la base de datos optimizado para MySQL para consultas eficientes.
+        dialect: org.hibernate.dialect.MySQLDialect
+
+    # Mostrar en la consola las consultas SQL (false no las muestra, true las muestra).
+    show-sql: true
+
+springdoc:
+  # Asegura que el JSON de la especificación esté bien ordenado.
+  writer-with-order-by-keys: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  endpoint:
+    health:
+      show:
+        details: always
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http.server:
+          requests: true
+  tracing:
+    sampling:
+      probability: 1.0
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+auth:
+  access-token-secret-key: aM3I6FjqF2L3H1wQvGRb9J7Fc6OgezCpnMjMrxECJHk=
+  access-token-expiration: 180000
+  refresh-token-secret-key: DNfQXVPMvyL5TKLZ+ZCmhRAxixdbtz/IRoPKgXJMJGQ=
+  refresh-token-expiration: 604800000 
